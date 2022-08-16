@@ -8,8 +8,14 @@ import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  inject: ['sessionService'],
   components: {
     HelloWorld
+  },
+  created() {
+    if (this.sessionService.isAuthenticated) {
+      alert('Вы авторизованы')
+    }
   }
 }
 </script>
