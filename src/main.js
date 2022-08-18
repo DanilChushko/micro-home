@@ -8,7 +8,7 @@ import App from './App.vue';
 const vueLifecycles = singleSpaVue({
 	createApp,
 	appOptions: {
-		el: '#home',
+		el: '#content',
 		render: () => h(App),
 	},
 	handleInstance: (app, singleSpaProps) => {
